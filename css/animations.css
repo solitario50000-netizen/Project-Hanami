@@ -1,0 +1,88 @@
+/* Intro */
+
+#intro{
+
+    animation:
+
+    introFade 4s forwards;
+
+}
+
+@keyframes introFade{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    70%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+/* Portada */
+
+#cover{
+
+    animation:
+
+    coverFade 2s forwards;
+
+    animation-delay:3.5s;
+
+}
+
+@keyframes coverFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+@keyframes twinkle {
+
+    0% {
+        opacity: .15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+
+    100% {
+        opacity: .15;
+        transform: scale(1);
+    }
+
+}

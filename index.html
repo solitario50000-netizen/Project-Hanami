@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karolay's Era 🌸</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Fondo -->
+    <div class="background"></div>
+    <div class="moon"></div>
+
+    <!-- Capa para las estrellas -->
+    <div id="stars"></div>
+
+    <!-- Capa para los pétalos -->
+    <div id="petals"></div>
+
+    <!-- Pantalla de introducción -->
+    <section id="intro">
+
+        <p class="intro-text">
+            Every story begins with a coincidence...
+        </p>
+
+    </section>
+
+    <!-- Portada -->
+    <main id="cover">
+
+        <h1>Karolay's Era</h1>
+
+        <p class="subtitle">
+            A little story made for you.
+        </p>
+
+        <button id="openBook">
+            📖 Open the Book
+        </button>
+
+    </main>
+
+    <!-- Aquí aparecerá el libro -->
+
+<section id="book">
+
+    <div class="book">
+
+        <div class="page left-page">
+
+            <h2 id="leftTitle"></h2>
+
+            <p id="leftText"></p>
+
+        </div>
+
+        <div class="page right-page">
+
+            <img id="rightImage" src="" alt="Foto">
+
+            <p id="rightText"></p>
+
+            <div id="nextPage" class="page-corner"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="finalMessage">
+
+    <div class="final-card">
+
+        <h1>Para Karolay 🌸</h1>
+
+        <p>
+            Gracias por llegar a mi vida.
+            <br><br>
+
+            No sé qué escribirá el futuro,
+            pero sí sé que conocerte ha sido
+            una de las casualidades más bonitas
+            que me han pasado.
+
+            <br><br>
+
+            Espero que esta pequeña sorpresa
+            te haya sacado una sonrisa.
+
+            <br><br>
+
+            ❤️ Cristhian ❤️
+        </p>
+
+    </div>
+
+</section>
+    
+    <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="js/petals.js"></script>
+    <script src="js/story.js"></script>
+    <script src="js/book.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

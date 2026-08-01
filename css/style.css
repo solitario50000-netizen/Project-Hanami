@@ -1,0 +1,161 @@
+/* PROJECT HANAMI v0.2 */
+body{margin:0;font-family:Poppins,sans-serif;background:#0b1024;color:#fff;}
+.background{position:fixed;inset:0;background:linear-gradient(180deg,#0b1024,#3a285e);z-index:-3;}
+#cover{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}#cover h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,8vw,6rem);color:#ffe6f2}.subtitle{margin:1rem 0 3rem}#openBook{padding:18px 48px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;cursor:pointer}.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle 4s infinite}@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1;transform:scale(1.5)}}
+/* ==========================
+   PÉTALOS
+========================== */
+
+.petal{
+
+    position:absolute;
+
+    top:-40px;
+
+    background:linear-gradient(
+        145deg,
+        #ffd6ea,
+        #ffc0da
+    );
+
+    border-radius:70% 30% 70% 30%;
+
+    opacity:.9;
+
+    filter:drop-shadow(0 0 5px rgba(255,200,220,.4));
+
+    animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(360deg);
+
+    }
+
+}
+/* ==========================
+   LUNA
+========================== */
+
+.moon{
+
+    position:fixed;
+
+    top:70px;
+    right:100px;
+
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle at 35% 35%,
+    #fff,
+    #ffeff8 55%,
+    #ffd6ea 100%);
+
+    box-shadow:
+
+    0 0 30px rgba(255,220,235,.6),
+
+    0 0 80px rgba(255,200,220,.25),
+
+    0 0 150px rgba(255,180,220,.12);
+
+    opacity:.85;
+
+    z-index:-2;
+
+}
+/* ==========================
+   LUNA
+========================== */
+
+.moon{
+    position: fixed;
+
+    top: 60px;
+    right: 80px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 35% 35%,
+        #ffffff,
+        #fff1f8 60%,
+        #ffd6e8 100%
+    );
+
+    box-shadow:
+        0 0 30px rgba(255,220,235,.6),
+        0 0 80px rgba(255,200,220,.25);
+
+    opacity: .85;
+
+    z-index: -2;
+}
+/* ==========================
+   INTRO
+========================== */
+
+#intro{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #090d1f;
+
+    z-index: 100;
+
+    transition: opacity 1.5s ease;
+}
+
+#intro.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro-text{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: #ffe7f2;
+    text-align: center;
+
+    animation: pulseText 2s ease-in-out infinite;
+}
+
+@keyframes pulseText{
+
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+

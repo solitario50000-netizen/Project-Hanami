@@ -1,0 +1,211 @@
+/* ==========================
+      BOOK V4
+========================== */
+
+/* Contenedor del libro */
+
+#book{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+/* Libro */
+
+.book{
+    display:flex;
+
+    width:92%;
+    max-width:900px;
+    min-height:560px;
+
+    background:#fdf9f2;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+
+    transition:
+        transform .45s ease,
+        opacity .5s ease;
+}
+
+/* Animación */
+
+.book.turn{
+    transform:scale(.98) rotateY(-6deg);
+}
+
+/* Páginas */
+
+.page{
+    flex:1;
+
+    position:relative;
+
+    padding:70px 55px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.left-page{
+    border-right:1px solid rgba(0,0,0,.08);
+}
+
+/* Títulos */
+
+.page h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.3rem;
+    color:#d47ca4;
+    margin-bottom:35px;
+}
+
+/* Texto */
+
+.page p{
+    font-size:1.35rem;
+    line-height:1.8;
+    color:#555;
+    white-space:pre-line;
+}
+
+/* Página derecha */
+
+.right-page{
+    gap:35px;
+}
+
+/* Imagen */
+
+#rightImage{
+    width:85%;
+    max-width:320px;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:8px solid white;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    display:block;
+
+    opacity:1;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+#rightImage.hide{
+    opacity:0;
+    transform:scale(.95);
+}
+
+/* Esquina */
+
+.page-corner{
+
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:75px;
+    height:75px;
+    cursor:pointer;
+
+}
+
+.page-corner::before{
+
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:75px;
+    height:75px;
+    background:linear-gradient(135deg,#ffd7e7,#e79bbb);
+    clip-path:polygon(100% 0,100% 100%,0 100%);
+    transition:.25s;
+}
+
+.page-corner:hover::before{
+    transform:scale(1.08);
+}
+
+/* Carta final */
+
+#finalMessage{
+    display:none;
+
+    opacity:0;
+
+    min-height:100vh;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    transition:opacity .8s ease;
+}
+
+#finalMessage.show{
+    display:flex;
+    opacity:1;
+}
+
+.final-card{
+    width:92%;
+    max-width:700px;
+
+    background:#fffaf5;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.final-card h1{
+    color:#d47aa6;
+    font-size:3rem;
+    margin-bottom:30px;
+    letter-spacing:1px;
+}
+
+.final-card p{
+    color:#333;
+    line-height:2.3;
+    font-size:1.2rem;
+}
+
+.final-card{
+    animation: appear .8s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
